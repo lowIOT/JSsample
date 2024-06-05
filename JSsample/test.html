@@ -1,0 +1,41 @@
+「Hello world!!」の表示
+<!-- alert(...) は、メッセージをダイアログとして表示 -->
+<script>
+	alert("Hello world!!");　
+</script>
+<!-- JavaScript は通常 <script>～</script> の間に記述 -->
+
+<!-- innerHTML を用いて、id="t1" で指定した箇所にメッセージを表示 -->
+<div id="t1"></div>
+<script>
+document.getElementById("t1").innerHTML = "Hello world!!";
+</script>
+
+<!-- デバッグ用の JavaScript コンソールにメッセージを表示  -->
+<script>
+	console.log("Hello world!!");
+</script>
+
+時刻を表示
+<!-- 時刻という、表示の度に変化する情報が表示 -->
+<div id="d1"></div>
+<script>
+document.getElementById("d1").innerHTML = new Date().toLocaleString();
+</script>
+
+<!-- 動く時計を表示 -->
+<div id="d2">&nbsp;</div>
+<script>
+setInterval(function() {
+  document.getElementById("d2").innerHTML = new Date().toLocaleString();
+}, 1000);
+</script>
+
+<!-- イベントハンドラ(on～)
+Click Me!! というボタンを押したときに、Hello! というダイアログを表示 -->
+<input type="button" value="Click Me!!" onclick="alert('Hello!!')">
+実行
+
+<!-- URL記述(javascript:...)
+リンクをクリックした際に JavaScript を実行 -->
+<a href="javascript:alert('Hello!!')">Click Me!!</a>
